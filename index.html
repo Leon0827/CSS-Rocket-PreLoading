@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./01 火箭升空.css">
+    <link rel="shortcut icon" href="./img/01 火箭升空-icon.svg" type="image/x-icon">
+    <title>火箭升空 | By Leon</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rocket">
+            <img src="./img/01 火箭升空-icon-center.png" alt="">
+        </div>
+        <i></i>
+    </div>
+    <div class="clear:both"></div>
+    <script>
+        // 随机数
+        function rand(m, n) {
+            return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+        }
+        // 光线总数
+        let num = 30;
+        // 循环
+        for (let i = 0; i < num; i++) {
+            // 创建i元素
+            const i = document.createElement('i');
+            // 设置样式
+            i.style.height = rand(30, 100) + 'px';
+            i.style.left = rand(1, 99) + 'vw';
+            // 随机动画的周期
+            i.style.animationDuration = rand(10, 80) / 10 + 's';
+            // 将i插入container中
+            document.querySelector('.container').appendChild(i);
+        }
+    </script>
+</body>
+
+</html>
